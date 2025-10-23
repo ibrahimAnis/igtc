@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
+import { analytics } from "@/lib/analytics";
 
 const Contact = () => {
   const contactInfo = [
@@ -26,8 +27,25 @@ const Contact = () => {
     }
   ];
 
+  const handleContactClick = (type: string, link: string) => {
+    analytics.trackClick(`Contact - ${type}`, link);
+    analytics.trackEvent({
+      category: "contact",
+      action: "contact_method_click",
+      label: type.toLowerCase(),
+    });
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Track form submission
+    analytics.trackEvent({
+      category: "form",
+      action: "contact_form_submit",
+      label: "contact_page",
+    });
+
     // Form submission logic here
     const formData = new FormData(e.target as HTMLFormElement);
     const name = formData.get('name');
@@ -71,6 +89,7 @@ const Contact = () => {
                 <CardContent className="p-6">
                   <a 
                     href={info.link}
+                    onClick={() => handleContactClick(info.title, info.link)}
                     className="flex items-start gap-4"
                   >
                     <div className="bg-accent/10 p-3 rounded-lg group-hover:bg-accent/20 transition-colors">

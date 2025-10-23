@@ -53,8 +53,8 @@ const Header = () => {
               alt="IGTC Logo"
               className={`w-auto transition-all duration-300 ${
                 isScrolled
-                  ? "h-16 md:h-20 lg:h-22"
-                  : "h-18 md:h-22 lg:h-24"
+                  ? "h-12 sm:h-14 md:h-16 lg:h-20"
+                  : "h-14 sm:h-16 md:h-20 lg:h-24"
               }`}
             />
           </button>

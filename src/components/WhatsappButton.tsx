@@ -1,7 +1,16 @@
 import waLogo from "@/assets/wa-logo.svg";
+import { analytics } from "@/lib/analytics";
 
 const WhatsAppButton = () => {
   const handleWhatsAppClick = () => {
+    // Track WhatsApp button click
+    analytics.trackClick("WhatsApp CTA Button", "https://wa.me/917000845488");
+    analytics.trackEvent({
+      category: "engagement",
+      action: "whatsapp_click",
+      label: "floating_button",
+    });
+
     const message = "Hi, I'm interested in your wholegrain products and would like to know more.";
     const whatsappUrl = `https://wa.me/917000845488?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
@@ -10,13 +19,13 @@ const WhatsAppButton = () => {
   return (
     <button
       onClick={handleWhatsAppClick}
-      className="fixed bottom-6 right-6 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50 group animate-scale-in"
+      className="fixed bottom-6 right-6 bg-transparent border-0 p-0 shadow-lg hover:shadow-2xl transition-all duration-300 z-50 group animate-scale-in cursor-pointer"
       aria-label="Contact us on WhatsApp"
     >
       <img 
         src={waLogo} 
         alt="WhatsApp" 
-        className="h-16 w-auto group-hover:scale-110 transition-transform" 
+        className="h-16 w-16 group-hover:scale-110 transition-transform drop-shadow-lg" 
       />
     </button>
   );

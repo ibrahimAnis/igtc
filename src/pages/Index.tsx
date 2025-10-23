@@ -10,8 +10,13 @@ import Team from "@/components/Team";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import AnalyticsDashboard from "@/components/AnalyticsDashboard";
+import { useAnalytics } from "@/hooks/useAnalytics";
 
 const Index = () => {
+  // Initialize analytics for this page
+  useAnalytics();
+
   return (
     <main className="min-h-screen">
       <Header />
@@ -26,6 +31,7 @@ const Index = () => {
       <Contact />
       <Footer />
       <WhatsAppButton />
+      <AnalyticsDashboard />
     </main>
   );
 };
