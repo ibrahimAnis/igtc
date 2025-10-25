@@ -36,6 +36,7 @@ class Analytics {
       // Load GA4 script
       const script1 = document.createElement("script");
       script1.async = true;
+      console.log("measurementId", measurementId);
       script1.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
       document.head.appendChild(script1);
 
