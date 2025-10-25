@@ -33,29 +33,45 @@ class Analytics {
     if (!this.checkConsent() || this.gaInitialized) return;
 
     try {
-      // Load GA4 script
-      const script1 = document.createElement("script");
-      script1.async = true;
-      script1.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
-      document.head.appendChild(script1);
-
-      // Initialize dataLayer
+      // Initialize dataLayer (gtag function should already exist from HTML)
       window.dataLayer = window.dataLayer || [];
       
-      // Define gtag function
-      const gtag = (...args: any[]) => {
-        window.dataLayer.push(args);
-      };
-      window.gtag = gtag;
-
-      gtag("js", new Date());
-      gtag("config", measurementId, {
+      // Define gtag function if not already defined
+      if (!window.gtag) {
+        window.gtag = function() {
+          window.dataLayer.push(arguments);
+        };
+      }
+      
+      // Configure GA4 with measurement ID
+      window.gtag('config', measurementId, {
         send_page_view: true,
-        cookie_flags: "SameSite=None;Secure",
+        cookie_flags: 'SameSite=None;Secure',
       });
 
+      // Check if script is already loaded from HTML
+      const scriptExists = document.querySelector(
+        `script[src*="googletagmanager.com/gtag/js"]`
+      );
+
+      if (!scriptExists) {
+        // Load GA4 script dynamically if not already in HTML
+        const script = document.createElement("script");
+        script.async = true;
+        script.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
+        script.onload = () => {
+          console.log("Google Analytics script loaded successfully (dynamic)");
+        };
+        script.onerror = () => {
+          console.error("Failed to load Google Analytics script");
+        };
+        document.head.appendChild(script);
+      } else {
+        console.log("Google Analytics script already loaded from HTML");
+      }
+
       this.gaInitialized = true;
-      console.log("Google Analytics initialized");
+      console.log("Google Analytics configured with ID:", measurementId);
     } catch (error) {
       console.error("Error initializing Google Analytics:", error);
     }
