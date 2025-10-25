@@ -4,15 +4,15 @@ import { analytics } from "@/lib/analytics";
 const WhatsAppButton = () => {
   const handleWhatsAppClick = () => {
     // Track WhatsApp button click
-    analytics.trackClick("WhatsApp CTA Button", "https://wa.me/917000845488");
+    analytics.trackClick("WhatsApp CTA Button", "https://wa.me/919561357752");
     analytics.trackEvent({
       category: "engagement",
       action: "whatsapp_click",
       label: "floating_button",
     });
 
-    const message = "Hi, I'm interested in your wholegrain products and would like to know more.";
-    const whatsappUrl = `https://wa.me/917000845488?text=${encodeURIComponent(message)}`;
+    const message = "Hi, I'm interested in your export products and would like to know more about international shipping.";
+    const whatsappUrl = `https://wa.me/919561357752?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
 

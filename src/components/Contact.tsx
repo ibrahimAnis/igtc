@@ -10,8 +10,8 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Call Us",
-      details: "+91 70008-45488",
-      link: "tel:+917000845488"
+      details: "+91 95613-57752",
+      link: "tel:+919561357752"
     },
     {
       icon: Mail,
@@ -22,8 +22,8 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Visit Us",
-      details: "West Nimar, Madhya Pradesh, India",
-      link: "#"
+      details: "13, Bank Colony, Mangrul Road, Khargone 451001, Madhya Pradesh, India",
+      link: "https://maps.google.com/?q=13+Bank+Colony+Mangrul+Road+Khargone+451001"
     }
   ];
 
@@ -54,7 +54,7 @@ const Contact = () => {
     
     // Create WhatsApp message
     const whatsappMessage = `Hi, I'm ${name}.\nEmail: ${email}\n\n${message}`;
-    const whatsappUrl = `https://wa.me/917000845488?text=${encodeURIComponent(whatsappMessage)}`;
+    const whatsappUrl = `https://wa.me/919561357752?text=${encodeURIComponent(whatsappMessage)}`;
     window.open(whatsappUrl, '_blank');
   };
 
@@ -63,11 +63,11 @@ const Contact = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 animate-fade-in">
           <h2 className="font-playfair text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Contact Madhya Pradesh's Premier Wholegrain Supplier
+            Contact Us for Global Export Inquiries
           </h2>
           <div className="w-20 h-1 bg-accent mx-auto mb-6" aria-hidden="true"></div>
-          <p className="text-muted-foreground text-xl max-w-2xl mx-auto">
-            Serving West Nimar and Central India — Contact us for bulk wholegrain orders and partnership opportunities
+          <p className="text-muted-foreground text-xl max-w-3xl mx-auto">
+            Based in Khargone, Madhya Pradesh — Exporting premium agricultural products to Singapore, Malaysia, UAE, Europe, USA, and worldwide
           </p>
         </div>
 
@@ -113,8 +113,8 @@ const Contact = () => {
                 <h4 className="font-playfair text-xl font-bold text-primary-foreground mb-2">
                   Business Hours
                 </h4>
-                <p className="text-primary-foreground/90 mb-1">Monday - Friday: 8:00 AM - 6:00 PM</p>
-                <p className="text-primary-foreground/90">Saturday: 9:00 AM - 2:00 PM</p>
+                <p className="text-primary-foreground/90 mb-1">Monday - Friday: 10:00 AM - 7:00 PM</p>
+                <p className="text-primary-foreground/90">Saturday - Sunday: Closed</p>
               </CardContent>
             </Card>
           </div>

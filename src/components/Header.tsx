@@ -16,12 +16,11 @@ const Header = () => {
 
   const navItems = [
     { label: "Home", href: "#hero" },
-    { label: "Services", href: "#services" },
     { label: "Products", href: "#products" },
-    { label: "Showcase", href: "#showcase" },
-    { label: "Service Area", href: "#service-area" },
     { label: "About", href: "#about" },
-    { label: "Team", href: "#team" },
+    { label: "Facilities", href: "#facilities" },
+    { label: "Gallery", href: "#video-gallery" },
+    { label: "Reviews", href: "#reviews" },
     { label: "Contact", href: "#contact" },
   ];
 

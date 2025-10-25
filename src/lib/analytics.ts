@@ -226,25 +226,91 @@ class Analytics {
   async getUserLocation() {
     if (!this.checkConsent()) return null;
 
-    try {
-      // Using ipapi.co for geolocation (free tier available)
-      const response = await fetch("https://ipapi.co/json/");
-      const data = await response.json();
-      
-      return {
-        ip: data.ip,
-        city: data.city,
-        region: data.region,
-        country: data.country_name,
-        countryCode: data.country_code,
-        timezone: data.timezone,
-        latitude: data.latitude,
-        longitude: data.longitude,
-      };
-    } catch (error) {
-      console.error("Error fetching geolocation:", error);
-      return null;
+    // Try multiple geolocation services (fallback strategy)
+    const services = [
+      // Service 1: ip-api.com (free, no CORS issues, 45 requests/min)
+      {
+        name: "ip-api.com",
+        url: "http://ip-api.com/json/?fields=status,message,country,countryCode,region,city,lat,lon,timezone,query",
+        transform: (data: any) => ({
+          ip: data.query,
+          city: data.city,
+          region: data.region,
+          country: data.country,
+          countryCode: data.countryCode,
+          timezone: data.timezone,
+          latitude: data.lat,
+          longitude: data.lon,
+        })
+      },
+      // Service 2: ipapi.co (backup, may have CORS issues)
+      {
+        name: "ipapi.co",
+        url: "https://ipapi.co/json/",
+        transform: (data: any) => ({
+          ip: data.ip,
+          city: data.city,
+          region: data.region,
+          country: data.country_name,
+          countryCode: data.country_code,
+          timezone: data.timezone,
+          latitude: data.latitude,
+          longitude: data.longitude,
+        })
+      },
+      // Service 3: ipwhois.app (backup, free)
+      {
+        name: "ipwhois.app",
+        url: "https://ipwhois.app/json/",
+        transform: (data: any) => ({
+          ip: data.ip,
+          city: data.city,
+          region: data.region,
+          country: data.country,
+          countryCode: data.country_code,
+          timezone: data.timezone,
+          latitude: data.latitude,
+          longitude: data.longitude,
+        })
+      }
+    ];
+
+    // Try each service until one works
+    for (const service of services) {
+      try {
+        console.log(`Attempting geolocation with ${service.name}...`);
+        
+        const response = await fetch(service.url, {
+          method: 'GET',
+          headers: {
+            'Accept': 'application/json',
+          },
+        });
+
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const data = await response.json();
+        
+        // Check if the response is valid
+        if (data.status === 'fail') {
+          throw new Error(data.message || 'Geolocation failed');
+        }
+
+        const location = service.transform(data);
+        console.log(`Geolocation successful with ${service.name}:`, location);
+        
+        return location;
+      } catch (error) {
+        console.warn(`Failed to get location from ${service.name}:`, error);
+        // Continue to next service
+      }
     }
+
+    // All services failed
+    console.error("All geolocation services failed. Location tracking disabled.");
+    return null;
   }
 
   // Store page view locally for custom analytics

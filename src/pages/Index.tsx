@@ -1,12 +1,11 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
-import Services from "@/components/Services";
 import Products from "@/components/Products";
-import VideoShowcase from "@/components/VideoShowcase";
-import ServiceArea from "@/components/ServiceArea";
-import Stats from "@/components/Stats";
-import Team from "@/components/Team";
+import Certifications from "@/components/Certifications";
+import Facilities from "@/components/Facilities";
+import VideoGallery from "@/components/VideoGallery";
+import CustomerReviews from "@/components/CustomerReviews";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -21,13 +20,12 @@ const Index = () => {
     <main className="min-h-screen">
       <Header />
       <Hero />
-      <Services />
       <Products />
-      <VideoShowcase />
-      <ServiceArea />
-      <Stats />
+      <Certifications />
       <About />
-      <Team />
+      <Facilities />
+      <VideoGallery />
+      <CustomerReviews />
       <Contact />
       <Footer />
       <WhatsAppButton />

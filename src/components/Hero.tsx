@@ -14,8 +14,8 @@ const Hero = () => {
   }, []);
 
   const scrollToServices = () => {
-    const servicesSection = document.getElementById('services');
-    servicesSection?.scrollIntoView({ behavior: 'smooth' });
+    const productsSection = document.getElementById('products');
+    productsSection?.scrollIntoView({ behavior: 'smooth' });
   };
 
   const scrollToContact = () => {
@@ -58,10 +58,10 @@ const Hero = () => {
           }}
         >
           <h1 className="font-playfair text-5xl md:text-7xl font-bold text-primary-foreground mb-6 leading-tight">
-            Premium Supplier of Agricultural Products
+            Your Trusted Partner in Global Agricultural Exports
           </h1>
-          <p className="font-inter text-xl md:text-2xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
-            Leading B2B manufacturer of wheat, soyabean, corn and millets across Madhya Pradesh, Maharashtra, Gujarat & Rajasthan. Complete farming, processing, storage & machinery solutions.
+          <p className="font-inter text-xl md:text-2xl text-primary-foreground/90 mb-8 max-w-3xl mx-auto">
+            Connecting India's finest agricultural products to international markets across 50+ countries. Specializing in premium rice, authentic spices, nutritious pulses, healthy millets, and fresh produce with FSSAI certification and export-grade quality assurance.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-slide-up">
             <Button 
@@ -70,7 +70,7 @@ const Hero = () => {
               className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-8 py-6 text-lg group"
               aria-label="Discover our wholegrain manufacturing services in Madhya Pradesh"
             >
-              Discover Our Services
+              Explore Our Products
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
             </Button>
             <Button 
@@ -78,9 +78,9 @@ const Hero = () => {
               variant="outline"
               onClick={scrollToContact}
               className="bg-transparent border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-semibold px-8 py-6 text-lg"
-              aria-label="Contact us for wholegrain supply inquiries"
+              aria-label="Contact us for export inquiries"
             >
-              Contact Us
+              Start Export Inquiry
             </Button>
           </div>
         </div>
