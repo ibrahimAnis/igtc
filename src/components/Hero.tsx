@@ -61,7 +61,8 @@ const Hero = () => {
             Your Trusted Partner in Global Agricultural Exports
           </h1>
           <p className="font-inter text-xl md:text-2xl text-primary-foreground/90 mb-8 max-w-3xl mx-auto">
-            Connecting India's finest agricultural products to international markets across 50+ countries. Specializing in premium rice, authentic spices, nutritious pulses, healthy millets, and fresh produce with FSSAI certification and export-grade quality assurance.
+            Connecting India's finest agricultural products to international markets across 50+ countries. Specializing in premium quality millets like 
+            pearl millet, finger millet, sorghum, maize along with chickpeas, bengal gram, edible gum, red and green chillies and many more products.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-slide-up">
             <Button 

@@ -13,32 +13,64 @@ import redChilliImg from "@/assets/red-chilli.jpg";
 const Products = () => {
   const products = [
     {
-      name: "Premium Rice",
-      description: "High-quality long-grain rice processed and exported globally. Perfect for international food distribution in Singapore, UAE, USA, and Europe.",
-      image: "https://images.unsplash.com/photo-1586201375761-83865001e31c?w=500",
-      features: ["Long Grain", "Export Grade", "FSSAI Certified", "Global Shipping"],
-      category: "Grains",
-      exportMarkets: ["Singapore", "Malaysia", "UAE", "USA"]
+      name: "Jowar (Sorghum)",
+      description: "Export-grade gluten-free jowar with high fiber content. Carefully processed, quality tested, and certified for international health food standards and applications.",
+      image: jowarImg,
+      features: ["High Fiber", "Gluten-Free", "Export Quality", "Bulk Orders"],
+      category: "Millets",
+      exportMarkets: ["USA", "UK", "Singapore", "Europe"]
     },
     {
-      name: "Red Chilli",
-      description: "Premium quality red chilli powder and whole chillies. Exported to Middle East, Europe, and Asian markets with consistent heat levels and vibrant color.",
-      image: redChilliImg,
-      features: ["High Capsaicin", "Premium Quality", "Bulk Export", "Custom Packing"],
-      category: "Spices",
-      exportMarkets: ["Dubai", "Qatar", "UK", "Malaysia"]
+      name: "Bajra (Pearl Millet)",
+      description: "Premium nutritious bajra with high protein content. Cleaned, sorted, and packaged meeting international gluten-free food production standards and certifications.",
+      image: bajraImg,
+      features: ["Gluten-Free", "High Protein", "Export Ready", "Bulk Available"],
+      category: "Millets",
+      exportMarkets: ["USA", "Europe", "UAE", "UK"]
     },
     {
-      name: "Yellow Corn",
-      description: "High-quality yellow corn for animal feed and food processing. Exported globally to manufacturers in Asia, Middle East, and European markets.",
+      name: "Soyabean",
+      description: "Non-GMO premium soyabeans with high oil content. Export-grade quality for oil extraction and food processing with international quality certification.",
+      image: soyabeanImg,
+      features: ["High Oil Content", "Non-GMO", "Export Grade", "Quality Certified"],
+      category: "Oilseeds",
+      exportMarkets: ["Singapore", "USA", "Europe", "UAE"]
+    },
+    {
+      name: "Maize",
+      description: "High-quality moisture-controlled maize for food and feed grade applications. Thoroughly cleaned, graded, and tested for international export standards.",
       image: cornImg,
       features: ["High Grade", "Bulk Export", "Food & Feed Grade", "Moisture Control"],
       category: "Grains",
       exportMarkets: ["Singapore", "Malaysia", "UAE", "Europe"]
     },
     {
+      name: "Chickpeas (Chana)",
+      description: "Premium quality chickpeas with consistent size and color. Machine-cleaned, double-sorted, and quality-checked for international food processing and export standards.",
+      image: chickpeasImg,
+      features: ["Premium Quality", "Export Grade", "Quality Certified", "Bulk Available"],
+      category: "Pulses",
+      exportMarkets: ["Dubai", "UK", "USA", "Singapore"]
+    },
+    {
+      name: "Edible Gum (Gond)",
+      description: "100% natural food-grade and pharma-grade tree gum. Carefully sourced, processed, and tested meeting international quality standards for multiple applications.",
+      image: treeGumImg,
+      features: ["100% Natural", "Food Grade", "Pharma Grade", "Bulk Orders"],
+      category: "Natural Products",
+      exportMarkets: ["USA", "Europe", "Singapore", "UAE"]
+    },
+    {
+      name: "Red Chilli",
+      description: "Premium red chilli with consistent heat levels and vibrant color. High capsaicin content, perfectly dried, and custom-packed for export standards.",
+      image: redChilliImg,
+      features: ["High Capsaicin", "Premium Quality", "Bulk Export", "Custom Packing"],
+      category: "Spices",
+      exportMarkets: ["Dubai", "Qatar", "UK", "Malaysia"]
+    },
+    {
       name: "Fresh Banana",
-      description: "Fresh, ripe bananas sourced from quality farms. Exported to international markets with proper cold chain logistics for Qatar, Oman, Bahrain, and UAE.",
+      description: "Farm-fresh ripe bananas with superior quality and taste. Transported via temperature-controlled cold chain logistics ensuring optimal freshness and minimal damage.",
       image: "https://images.unsplash.com/photo-1603833665858-e61d17a86224?w=500",
       features: ["Fresh Quality", "Cold Chain", "Ripe & Ready", "Daily Export"],
       category: "Fruits",
@@ -46,59 +78,11 @@ const Products = () => {
     },
     {
       name: "Premium Papaya",
-      description: "Fresh papayas with excellent sweetness and texture. Exported to Europe, UAE, and Asian markets with premium packaging and quality assurance.",
+      description: "Sweet, fresh papayas with excellent texture and rich flavor. Premium-grade selection, protective packaging, and proper handling ensuring quality delivery worldwide.",
       image: "https://images.unsplash.com/photo-1617112848923-cc2234396a8d?w=500",
       features: ["Sweet & Fresh", "Premium Grade", "Export Ready", "Quality Packed"],
       category: "Fruits",
       exportMarkets: ["Europe", "UAE", "Singapore", "UK"]
-    },
-    {
-      name: "Tree Gum (Gond)",
-      description: "Natural tree gum (edible gum) used in food processing and pharmaceuticals. Exported globally to food manufacturers and pharmaceutical companies.",
-      image: treeGumImg,
-      features: ["100% Natural", "Food Grade", "Pharma Grade", "Bulk Orders"],
-      category: "Natural Products",
-      exportMarkets: ["USA", "Europe", "Singapore", "UAE"]
-    },
-    {
-      name: "Chickpeas (Chana)",
-      description: "Premium quality chickpeas processed for international markets. Exported to Middle East, Europe, USA, and Asian countries for food processing.",
-      image: chickpeasImg,
-      features: ["Premium Quality", "Export Grade", "FSSAI Approved", "Bulk Available"],
-      category: "Pulses",
-      exportMarkets: ["Dubai", "UK", "USA", "Singapore"]
-    },
-    {
-      name: "Premium Wheat",
-      description: "High-quality wheat grains for milling and food processing. Exported to international markets with excellent protein content and moisture control.",
-      image: "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=500",
-      features: ["Protein: 12-14%", "Moisture: <12%", "Export Quality", "Bulk Orders"],
-      category: "Grains",
-      exportMarkets: ["Malaysia", "UAE", "Qatar", "Oman"]
-    },
-    {
-      name: "Soyabean",
-      description: "Premium soyabeans for oil extraction and food processing. Exported globally to manufacturers in Singapore, Malaysia, Europe, and USA.",
-      image: soyabeanImg,
-      features: ["High Oil Content", "Non-GMO", "Export Grade", "Quality Certified"],
-      category: "Oilseeds",
-      exportMarkets: ["Singapore", "USA", "Europe", "UAE"]
-    },
-    {
-      name: "Bajra (Pearl Millet)",
-      description: "Nutritious bajra grains exported to health-conscious markets worldwide. Popular in USA, Europe, and Middle East for gluten-free food production.",
-      image: bajraImg,
-      features: ["Gluten-Free", "High Protein", "Export Ready", "Bulk Available"],
-      category: "Millets",
-      exportMarkets: ["USA", "Europe", "UAE", "UK"]
-    },
-    {
-      name: "Jowar (Sorghum)",
-      description: "Premium quality jowar for international health food markets. Exported to USA, Europe, and Asian countries for cereal and health food manufacturing.",
-      image: jowarImg,
-      features: ["High Fiber", "Gluten-Free", "Export Quality", "Bulk Orders"],
-      category: "Millets",
-      exportMarkets: ["USA", "UK", "Singapore", "Europe"]
     },
   ];
 
@@ -124,16 +108,6 @@ const Products = () => {
             Global Agricultural Export Products
           </h2>
           <div className="w-24 h-1 bg-accent mx-auto mb-6" aria-hidden="true"></div>
-          <p className="text-muted-foreground text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed">
-            Premium processed agricultural products exported to Singapore, Malaysia, UAE, Dubai, Qatar, Oman, Bahrain, Europe, UK, USA, and worldwide
-          </p>
-          <div className="mt-6 flex flex-wrap justify-center gap-3">
-            {["Singapore", "Malaysia", "UAE", "Dubai", "Qatar", "USA", "UK", "Europe", "Bahrain", "Oman"].map((country, idx) => (
-              <span key={idx} className="px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-semibold">
-                {country}
-              </span>
-            ))}
-          </div>
         </div>
 
         {/* Products Grid */}

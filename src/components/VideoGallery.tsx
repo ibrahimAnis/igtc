@@ -41,46 +41,6 @@ const VideoGallery = () => {
       videoUrl: processingArea,
       category: "Processing"
     },
-    {
-      id: "2",
-      title: "Advanced Machinery Operations",
-      description: "High-capacity machinery for cleaning, sorting, and packaging agricultural products",
-      thumbnail: machineryImg,
-      videoUrl: machinery1,
-      category: "Machinery"
-    },
-    {
-      id: "3",
-      title: "Temperature-Controlled Storage",
-      description: "Modern warehouse facilities with climate control for product preservation",
-      thumbnail: storageImg1,
-      videoUrl: storageVideo,
-      category: "Storage"
-    },
-    {
-      id: "4",
-      title: "Quality Control Process",
-      description: "Rigorous quality inspection ensuring international export standards",
-      thumbnail: storageImg2,
-      videoUrl: storage1,
-      category: "Quality"
-    },
-    {
-      id: "5",
-      title: "Export Packaging Line",
-      description: "Automated packaging solutions for international shipping requirements",
-      thumbnail: storageImg3,
-      videoUrl: storage5,
-      category: "Packaging"
-    },
-    {
-      id: "6",
-      title: "Loading & Logistics",
-      description: "Efficient loading operations for container shipments worldwide",
-      thumbnail: storageImg4,
-      videoUrl: storageVideo3,
-      category: "Logistics"
-    }
   ];
 
   const handleVideoClick = (video: VideoItem) => {

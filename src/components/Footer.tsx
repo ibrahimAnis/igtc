@@ -53,7 +53,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <img src={logo} alt="IGTC Logo" className="h-16 w-auto mb-4" />
+            <img src={logo} alt="IGTC Logo - Interglobe Trading Company" className="h-20 sm:h-24 md:h-28 w-auto mb-4" />
             <h3 className="font-playfair text-2xl font-bold mb-4">
               Interglobe Trading Company
             </h3>

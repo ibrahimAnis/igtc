@@ -227,31 +227,6 @@ const CustomerReviews = () => {
             ))}
           </div>
         </div>
-
-        {/* Call to Action */}
-        <div className="mt-16 text-center">
-          <Card className="max-w-4xl mx-auto bg-gradient-to-r from-primary to-accent border-0">
-            <CardContent className="p-8 md:p-12">
-              <Star className="h-16 w-16 text-white mx-auto mb-4 fill-white" />
-              <h3 className="font-playfair text-3xl md:text-4xl font-bold text-white mb-4">
-                Join Our Global Client Network
-              </h3>
-              <p className="text-white/90 text-lg mb-6 max-w-2xl mx-auto">
-                Experience world-class agricultural export services with FSSAI certified quality and reliable international shipping
-              </p>
-              <Button
-                size="lg"
-                className="bg-white text-primary hover:bg-gray-100 font-bold px-8 py-6 text-lg shadow-xl"
-                onClick={() => {
-                  const whatsappUrl = `https://wa.me/919561357752?text=${encodeURIComponent("Hi, I'm interested in becoming an import partner.")}`;
-                  window.open(whatsappUrl, '_blank');
-                }}
-              >
-                Become an Import Partner
-              </Button>
-            </CardContent>
-          </Card>
-        </div>
       </div>
     </section>
   );

@@ -11,7 +11,7 @@ const Contact = () => {
       icon: Phone,
       title: "Call Us",
       details: "+91 95613-57752",
-      link: "tel:+919561357752"
+      link: "tel:+918839070610"
     },
     {
       icon: Mail,

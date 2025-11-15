@@ -41,12 +41,9 @@ const About = () => {
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="font-playfair text-4xl md:text-5xl font-bold text-foreground mb-4">
-            About Our Global Export Business
+            About Us
           </h2>
           <div className="w-24 h-1 bg-accent mx-auto mb-6" aria-hidden="true"></div>
-          <p className="text-muted-foreground text-xl max-w-3xl mx-auto">
-            Leading agricultural product exporter from Madhya Pradesh to international markets
-          </p>
         </div>
 
         {/* Main Content Grid */}
@@ -65,7 +62,7 @@ const About = () => {
                   Leadership & Vision
                 </p>
                 <p className="text-white/90 text-lg">
-                  Committed to delivering premium quality agricultural products to the world
+                We don't just sell products - we build relationships based on trust and consistent performance.
                 </p>
               </div>
             </div>

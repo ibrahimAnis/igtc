@@ -12,41 +12,23 @@ const Facilities = () => {
     {
       icon: Factory,
       title: "Modern Processing Unit",
-      description: "State-of-the-art machinery for cleaning, sorting, and processing agricultural products",
+      description: "Machinery for cleaning, sorting, and processing agricultural products",
       color: "bg-blue-500"
     },
     {
       icon: Warehouse,
-      title: "Climate-Controlled Storage",
-      description: "Temperature and humidity controlled warehouses maintaining product quality",
+      title: "Skilled Workforce",
+      description: "Experienced team trained in quality control, hygiene standards, and international export protocols ensuring consistent product excellence",
       color: "bg-green-500"
     },
     {
-      icon: Gauge,
-      title: "Quality Control Lab",
-      description: "Advanced testing facilities ensuring international export standards",
-      color: "bg-purple-500"
-    },
-    {
-      icon: Shield,
-      title: "FSSAI Certified Facility",
-      description: "Fully compliant with food safety regulations and hygiene standards",
-      color: "bg-orange-500"
-    },
-    {
       icon: Truck,
-      title: "Logistics Center",
-      description: "Efficient loading docks and transport facilities for global shipping",
+      title: "Secure Transportation",
+      description: "Secure transportation of products to and from the warehouse",
       color: "bg-red-500"
     },
-    {
-      icon: Package,
-      title: "Export Packaging",
-      description: "Automated packaging lines meeting international shipping requirements",
-      color: "bg-indigo-500"
-    }
   ];
-
+// TODO Change machinery images and description
   const machineryImages = [
     {
       src: machineryImg,
@@ -93,10 +75,11 @@ const Facilities = () => {
             <Warehouse className="h-10 w-10 text-accent" />
           </div>
           <h2 className="font-playfair text-4xl md:text-6xl font-bold text-foreground mb-4">
-            World-Class Processing & Storage Facilities
+            Processing & Storage Facilities
           </h2>
           <div className="w-24 h-1 bg-accent mx-auto mb-6" aria-hidden="true"></div>
           <p className="text-muted-foreground text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed">
+            TODO Change description and take reference of whatsapp
             Modern infrastructure equipped with advanced machinery and climate-controlled storage ensuring premium quality for international exports
           </p>
         </div>
@@ -122,95 +105,6 @@ const Facilities = () => {
               </CardContent>
             </Card>
           ))}
-        </div>
-
-        {/* Machinery Section */}
-        <div className="mb-16">
-          <div className="text-center mb-12">
-            <Factory className="h-12 w-12 text-accent mx-auto mb-4" />
-            <h3 className="font-playfair text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Advanced Processing Machinery
-            </h3>
-            <div className="w-20 h-1 bg-accent mx-auto mb-4"></div>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Cutting-edge equipment for efficient and hygienic processing of agricultural products
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {machineryImages.map((image, index) => (
-              <Card 
-                key={index}
-                className="group overflow-hidden hover:shadow-2xl hover:-translate-y-3 transition-all duration-500 animate-fade-in border-2 border-accent/20 hover:border-accent"
-                style={{ animationDelay: `${index * 150}ms` }}
-              >
-                <CardContent className="p-0">
-                  <div className="relative h-80 overflow-hidden">
-                    <img 
-                      src={image.src}
-                      alt={`${image.title} - Agricultural processing equipment for export quality products`}
-                      className="w-full h-full object-cover group-hover:scale-125 transition-all duration-700"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent group-hover:from-black/95 transition-all duration-500"></div>
-                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                      <div className="w-20 h-20 bg-accent/30 rounded-full animate-pulse"></div>
-                    </div>
-                    <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-6 group-hover:translate-y-0 transition-transform duration-500">
-                      <h4 className="font-playfair text-2xl font-bold text-white mb-2">
-                        {image.title}
-                      </h4>
-                      <p className="text-white/90 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
-                        {image.description}
-                      </p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-
-        {/* Storage Section */}
-        <div>
-          <div className="text-center mb-12">
-            <Warehouse className="h-12 w-12 text-accent mx-auto mb-4" />
-            <h3 className="font-playfair text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Premium Storage Infrastructure
-            </h3>
-            <div className="w-20 h-1 bg-accent mx-auto mb-4"></div>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Temperature and humidity controlled warehouses maintaining optimal product quality for export
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {storageImages.map((image, index) => (
-              <Card 
-                key={index}
-                className="group overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 animate-scale-in"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <CardContent className="p-0">
-                  <div className="relative h-64 overflow-hidden">
-                    <img 
-                      src={image.src}
-                      alt={`${image.title} - Export storage facility in Khargone, Madhya Pradesh`}
-                      className="w-full h-full object-cover group-hover:scale-125 transition-all duration-700"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    <div className="absolute bottom-0 left-0 right-0 p-4">
-                      <h4 className="font-playfair text-lg font-bold text-white mb-1">
-                        {image.title}
-                      </h4>
-                      <p className="text-white/90 text-xs">
-                        {image.description}
-                      </p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
         </div>
 
         {/* Stats Section */}

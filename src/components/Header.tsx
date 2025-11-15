@@ -41,7 +41,7 @@ const Header = () => {
       }`}
     >
       <div className="px-2 sm:px-4 md:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20 md:h-24">
+        <div className="flex items-center justify-between h-24 md:h-28 lg:h-32">
           {/* Logo */}
           <button
             onClick={() => scrollToSection("#hero")}
@@ -49,11 +49,11 @@ const Header = () => {
           >
             <img
               src={logo}
-              alt="IGTC Logo"
+              alt="IGTC Logo - Interglobe Trading Company"
               className={`w-auto transition-all duration-300 ${
                 isScrolled
-                  ? "h-12 sm:h-14 md:h-16 lg:h-20"
-                  : "h-14 sm:h-16 md:h-20 lg:h-24"
+                  ? "h-16 sm:h-20 md:h-20 lg:h-24"
+                  : "h-20 sm:h-24 md:h-28 lg:h-32"
               }`}
             />
           </button>
