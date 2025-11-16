@@ -32,7 +32,7 @@ const CustomerReviews = () => {
       company: "Euro Organic Foods Ltd",
       country: "United Kingdom",
       rating: 5,
-      review: "IGTC has been instrumental in supplying organic pulses and grains to our UK operations. FSSAI certification and consistent quality make them a trusted partner for European markets.",
+      review: "IGTC has been instrumental in supplying organic pulses and grains to our UK operations. Their food safety certification and consistent quality make them a trusted partner for European markets.",
       product: "Organic Pulses & Grains"
     },
     {

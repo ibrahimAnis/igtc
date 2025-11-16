@@ -11,7 +11,7 @@ const WhatsAppButton = () => {
       label: "floating_button",
     });
 
-    const message = "Hi, I'm interested in your export products and would like to know more about international shipping.";
+    const message = "Hi, I'm interested in your products and would like to discuss in detail.";
     const whatsappUrl = `https://wa.me/919561357752?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };

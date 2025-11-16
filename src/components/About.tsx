@@ -1,38 +1,13 @@
-import { CheckCircle, Globe, Target, Award, TrendingUp } from "lucide-react";
+import { Eye, Crosshair, CheckCircle } from "lucide-react";
 import { Card, CardContent } from "./ui/card";
 import ownersImage from "@/assets/owners.jpg";
 
 const About = () => {
-  const capabilities = [
-    "Direct sourcing from certified farmers across India",
-    "State-of-the-art processing and packaging facilities",
-    "Temperature-controlled storage and cold chain logistics",
-    "International quality certifications (FSSAI, ISO)",
-    "Export documentation and customs clearance support",
-    "Bulk export to 50+ countries worldwide",
-  ];
-
-  const values = [
-    {
-      icon: Globe,
-      title: "Global Reach",
-      description: "Exporting to Singapore, Malaysia, UAE, USA, Europe, and more"
-    },
-    {
-      icon: Target,
-      title: "Quality Focus",
-      description: "FSSAI certified with international quality standards"
-    },
-    {
-      icon: Award,
-      title: "Trusted Partner",
-      description: "10+ years of reliable export and quality service"
-    },
-    {
-      icon: TrendingUp,
-      title: "Growing Network",
-      description: "Expanding to new markets across Asia, Middle East, and Americas"
-    }
+  const promises = [
+    "Premium quality at competitive prices",
+    "On-time delivery and transparent communication",
+    "Ethical sourcing and sustainable trade practices",
+    "Long-term business relationships built on mutual trust"
   ];
 
   return (
@@ -68,77 +43,56 @@ const About = () => {
             </div>
           </div>
 
-          {/* Content */}
-          <div className="animate-fade-in order-1 md:order-2">
-            <div className="inline-block mb-4">
-              <Globe className="h-10 w-10 text-accent" />
-            </div>
-            <h3 className="font-playfair text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Exporting Quality from India to the World
-            </h3>
-            <div className="w-20 h-1 bg-accent mb-6" aria-hidden="true"></div>
-            <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
-              Based in Khargone, Madhya Pradesh, we are a premier agricultural product exporter specializing in premium rice, spices, pulses, millets, and fresh produce. Our business connects Indian farmers with international markets across Singapore, Malaysia, UAE, Dubai, Qatar, Oman, Bahrain, Europe, UK, USA, and beyond.
-            </p>
-            <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-              With over a decade of export experience, FSSAI certification, and state-of-the-art processing facilities, we ensure every shipment meets international quality standards. Our comprehensive export solutions include sourcing, processing, quality control, documentation, and global logistics.
-            </p>
-            
-            <div className="space-y-3">
-              {capabilities.map((capability, index) => (
-                <div 
-                  key={index} 
-                  className="flex items-start gap-3 animate-slide-up p-3 rounded-lg hover:bg-secondary/50 transition-colors duration-300"
-                  style={{ animationDelay: `${index * 100}ms` }}
-                >
-                  <CheckCircle className="h-6 w-6 text-accent flex-shrink-0 mt-0.5" />
-                  <span className="text-foreground font-medium text-base">{capability}</span>
+          {/* Vision & Mission */}
+          <div className="animate-fade-in order-1 md:order-2 space-y-6">
+            {/* Vision */}
+            <Card className="group hover:shadow-xl transition-all duration-500 border-2 border-blue-500/20 hover:border-blue-500">
+              <CardContent className="p-6">
+                <div className="inline-flex items-center justify-center w-14 h-14 bg-blue-500/10 rounded-full mb-4 group-hover:bg-blue-500 group-hover:scale-110 transition-all duration-300">
+                  <Eye className="h-7 w-7 text-blue-500 group-hover:text-white transition-colors" />
                 </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Values Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
-          {values.map((value, index) => (
-            <Card 
-              key={index}
-              className="group hover:shadow-xl hover:-translate-y-2 transition-all duration-500 border-t-4 border-transparent hover:border-accent"
-            >
-              <CardContent className="p-6 text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-accent/10 rounded-full mb-4 group-hover:bg-accent group-hover:scale-110 transition-all duration-300">
-                  <value.icon className="h-8 w-8 text-accent group-hover:text-white transition-colors" />
-                </div>
-                <h4 className="font-playfair text-xl font-bold text-foreground mb-2">
-                  {value.title}
-                </h4>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  {value.description}
+                <h3 className="font-playfair text-2xl font-bold text-foreground mb-3">
+                  Vision
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  To be a globally recognized leader in agricultural exports, known for exceptional quality, trusted partnerships, and sustainable growth, bringing the best of Indian harvests to the world.
                 </p>
               </CardContent>
             </Card>
-          ))}
-        </div>
 
-        {/* Stats Section */}
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
-          <Card className="text-center p-6 bg-gradient-to-br from-accent/10 to-accent/5 border-accent/20 hover:shadow-lg transition-shadow">
-            <div className="text-4xl md:text-5xl font-bold text-accent mb-2">50+</div>
-            <p className="text-sm text-muted-foreground font-semibold">Countries Served</p>
-          </Card>
-          <Card className="text-center p-6 bg-gradient-to-br from-primary/10 to-primary/5 border-primary/20 hover:shadow-lg transition-shadow">
-            <div className="text-4xl md:text-5xl font-bold text-primary mb-2">10+</div>
-            <p className="text-sm text-muted-foreground font-semibold">Products Exported</p>
-          </Card>
-          <Card className="text-center p-6 bg-gradient-to-br from-green-500/10 to-green-500/5 border-green-500/20 hover:shadow-lg transition-shadow">
-            <div className="text-4xl md:text-5xl font-bold text-green-600 mb-2">100%</div>
-            <p className="text-sm text-muted-foreground font-semibold">FSSAI Certified</p>
-          </Card>
-          <Card className="text-center p-6 bg-gradient-to-br from-blue-500/10 to-blue-500/5 border-blue-500/20 hover:shadow-lg transition-shadow">
-            <div className="text-4xl md:text-5xl font-bold text-blue-600 mb-2">24/7</div>
-            <p className="text-sm text-muted-foreground font-semibold">Export Support</p>
-          </Card>
+            {/* Mission */}
+            <Card className="group hover:shadow-xl transition-all duration-500 border-2 border-accent/20 hover:border-accent">
+              <CardContent className="p-6">
+                <div className="inline-flex items-center justify-center w-14 h-14 bg-accent/10 rounded-full mb-4 group-hover:bg-accent group-hover:scale-110 transition-all duration-300">
+                  <Crosshair className="h-7 w-7 text-accent group-hover:text-white transition-colors" />
+                </div>
+                <h3 className="font-playfair text-2xl font-bold text-foreground mb-3">
+                  Mission
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  To uphold our promise of "Harvesting Quality, Delivering Trust" by sourcing the finest agricultural produce, ensuring uncompromised quality at every stage, and building lasting relationships through integrity and reliability.
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* Our Promise */}
+            <div className="bg-white rounded-lg p-6 border-2 border-accent/30 shadow-md">
+              <h3 className="font-playfair text-xl font-bold text-foreground mb-4">
+                Our Promise
+              </h3>
+              <div className="space-y-3">
+                {promises.map((promise, index) => (
+                  <div 
+                    key={index} 
+                    className="flex items-start gap-3"
+                  >
+                    <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                    <span className="text-foreground text-sm font-medium">{promise}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

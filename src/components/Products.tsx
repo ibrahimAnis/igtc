@@ -200,7 +200,7 @@ const Products = () => {
                 Ready to Export Worldwide
               </h3>
               <p className="text-white/90 text-lg mb-6 max-w-2xl mx-auto">
-                We handle international shipping, quality certifications, and export documentation for Singapore, Malaysia, UAE, Dubai, Qatar, Oman, Bahrain, Europe, UK, USA, and more.
+              We take pride in being a customer-focused company that believes in long-term relationships, not just transactions. Each shipment reflects our commitment to “Harvesting Quality, Delivering Trust".
               </p>
               <Button 
                 onClick={() => handleWhatsAppInquiry("your product requirements")}

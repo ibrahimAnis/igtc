@@ -58,7 +58,7 @@ const Footer = () => {
               Interglobe Trading Company
             </h3>
             <p className="text-primary-foreground/80 mb-4 leading-relaxed">
-              Premium agricultural product exporter from India to global markets. FSSAI certified with international quality standards.
+              Premium agricultural product exporter from India to global markets. Internationally certified with rigorous food safety and quality standards.
             </p>
             
             {/* Contact Info */}
@@ -67,9 +67,9 @@ const Footer = () => {
                 <Phone className="h-4 w-4" />
                 <span className="text-sm">+91 95613 57752</span>
               </a>
-              <a href="mailto:info@igtc.com" className="flex items-center gap-2 text-primary-foreground/80 hover:text-accent transition-colors">
+              <a href="mailto:info@interglobetc.com" className="flex items-center gap-2 text-primary-foreground/80 hover:text-accent transition-colors">
                 <Mail className="h-4 w-4" />
-                <span className="text-sm">info@igtc.com</span>
+                <span className="text-sm">info@interglobetc.com</span>
               </a>
               <div className="flex items-start gap-2 text-primary-foreground/80">
                 <MapPin className="h-4 w-4 mt-1 flex-shrink-0" />

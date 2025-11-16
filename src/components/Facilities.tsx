@@ -79,8 +79,7 @@ const Facilities = () => {
           </h2>
           <div className="w-24 h-1 bg-accent mx-auto mb-6" aria-hidden="true"></div>
           <p className="text-muted-foreground text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed">
-            TODO Change description and take reference of whatsapp
-            Modern infrastructure equipped with advanced machinery and climate-controlled storage ensuring premium quality for international exports
+          Our facility integrates advanced processing and safe storage systems to preserve the natural quality of every grain.
           </p>
         </div>
 
@@ -105,30 +104,6 @@ const Facilities = () => {
               </CardContent>
             </Card>
           ))}
-        </div>
-
-        {/* Stats Section */}
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
-          <Card className="text-center p-6 bg-gradient-to-br from-blue-500/10 to-blue-500/5 border-blue-500/20 hover:shadow-xl transition-all">
-            <Factory className="h-8 w-8 text-blue-600 mx-auto mb-3" />
-            <div className="text-3xl font-bold text-blue-600 mb-2">5000+</div>
-            <p className="text-sm text-muted-foreground font-semibold">Tons Capacity</p>
-          </Card>
-          <Card className="text-center p-6 bg-gradient-to-br from-green-500/10 to-green-500/5 border-green-500/20 hover:shadow-xl transition-all">
-            <Warehouse className="h-8 w-8 text-green-600 mx-auto mb-3" />
-            <div className="text-3xl font-bold text-green-600 mb-2">20000</div>
-            <p className="text-sm text-muted-foreground font-semibold">Sq Ft Storage</p>
-          </Card>
-          <Card className="text-center p-6 bg-gradient-to-br from-purple-500/10 to-purple-500/5 border-purple-500/20 hover:shadow-xl transition-all">
-            <Gauge className="h-8 w-8 text-purple-600 mx-auto mb-3" />
-            <div className="text-3xl font-bold text-purple-600 mb-2">100%</div>
-            <p className="text-sm text-muted-foreground font-semibold">Quality Control</p>
-          </Card>
-          <Card className="text-center p-6 bg-gradient-to-br from-orange-500/10 to-orange-500/5 border-orange-500/20 hover:shadow-xl transition-all">
-            <Shield className="h-8 w-8 text-orange-600 mx-auto mb-3" />
-            <div className="text-3xl font-bold text-orange-600 mb-2">FSSAI</div>
-            <p className="text-sm text-muted-foreground font-semibold">Certified</p>
-          </Card>
         </div>
       </div>
     </section>
