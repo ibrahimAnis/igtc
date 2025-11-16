@@ -66,9 +66,6 @@ const Contact = () => {
             Contact Us for Global Export Inquiries
           </h2>
           <div className="w-20 h-1 bg-accent mx-auto mb-6" aria-hidden="true"></div>
-          <p className="text-muted-foreground text-xl max-w-3xl mx-auto">
-            Based in Khargone, Madhya Pradesh — Exporting premium agricultural products to Singapore, Malaysia, UAE, Europe, USA, and worldwide
-          </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
