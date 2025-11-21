@@ -16,9 +16,6 @@ const Certifications = () => {
             Our Certifications
           </h2>
           <div className="w-24 h-1 bg-accent mx-auto mb-6" aria-hidden="true"></div>
-          <p className="text-muted-foreground text-xl max-w-3xl mx-auto leading-relaxed">
-            Certified by leading authorities, ensuring quality and compliance for global exports
-          </p>
         </div>
 
         {/* Certifications Grid */}
@@ -50,15 +47,6 @@ const Certifications = () => {
               </h3>
             </CardContent>
           </Card>
-        </div>
-
-        {/* Trust Banner */}
-        <div className="mt-16 max-w-3xl mx-auto">
-          <div className="bg-gradient-to-r from-accent/10 to-accent/5 border-2 border-accent/30 rounded-lg p-6 text-center">
-            <p className="text-foreground font-semibold text-lg">
-              ✓ Authorized and Certified for International Agricultural Export
-            </p>
-          </div>
         </div>
       </div>
     </section>

@@ -11,18 +11,6 @@ const Footer = () => {
       { name: "About Us", href: "#about" },
       { name: "Facilities", href: "#facilities" },
     ],
-    "Our Services": [
-      { name: "Export Services", href: "#products" },
-      { name: "Quality Control", href: "#facilities" },
-      { name: "Global Shipping", href: "#products" },
-      { name: "Documentation", href: "#contact" },
-    ],
-    "Export Markets": [
-      { name: "Singapore & Malaysia", href: "#products" },
-      { name: "UAE & Middle East", href: "#products" },
-      { name: "Europe & UK", href: "#products" },
-      { name: "USA & Americas", href: "#products" },
-    ],
   };
 
   const socialLinks = [
@@ -63,7 +51,7 @@ const Footer = () => {
             
             {/* Contact Info */}
             <div className="space-y-2 mb-4">
-              <a href="tel:+919561357752" className="flex items-center gap-2 text-primary-foreground/80 hover:text-accent transition-colors">
+              <a href="tel:+918839070610" className="flex items-center gap-2 text-primary-foreground/80 hover:text-accent transition-colors">
                 <Phone className="h-4 w-4" />
                 <span className="text-sm">+91 95613 57752</span>
               </a>

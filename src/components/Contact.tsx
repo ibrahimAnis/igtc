@@ -10,7 +10,7 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Call Us",
-      details: "+91 95613-57752",
+      details: "+91 88390-70610",
       link: "tel:+918839070610"
     },
     {

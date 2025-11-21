@@ -78,9 +78,6 @@ const Facilities = () => {
             Processing & Storage Facilities
           </h2>
           <div className="w-24 h-1 bg-accent mx-auto mb-6" aria-hidden="true"></div>
-          <p className="text-muted-foreground text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed">
-          Our facility integrates advanced processing and safe storage systems to preserve the natural quality of every grain.
-          </p>
         </div>
 
         {/* Features Grid */}
