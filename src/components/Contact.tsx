@@ -50,12 +50,20 @@ const Contact = () => {
     const formData = new FormData(e.target as HTMLFormElement);
     const name = formData.get('name');
     const email = formData.get('email');
+    const phone = formData.get('phone');
     const message = formData.get('message');
     
-    // Create WhatsApp message
-    const whatsappMessage = `Hi, I'm ${name}.\nEmail: ${email}\n\n${message}`;
-    const whatsappUrl = `https://wa.me/919561357752?text=${encodeURIComponent(whatsappMessage)}`;
-    window.open(whatsappUrl, '_blank');
+    // Create email with complete message
+    const subject = `Contact Form Submission from ${name}`;
+    const body = `Name: ${name}
+Email: ${email}
+Phone: ${phone || 'Not provided'}
+
+Message:
+${message}`;
+    
+    const mailtoUrl = `mailto:info@interglobetc.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailtoUrl;
   };
 
   return (

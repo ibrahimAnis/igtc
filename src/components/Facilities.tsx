@@ -66,8 +66,32 @@ const Facilities = () => {
   ];
 
   return (
-    <section id="facilities" className="py-20 bg-gradient-to-b from-secondary/20 to-background">
-      <div className="container mx-auto px-4">
+    <section id="facilities" className="py-20 relative overflow-hidden">
+      {/* Background Images with Light Blur */}
+      <div className="absolute inset-0">
+        {/* First background image - left side */}
+        <div 
+          className="absolute inset-0 bg-cover bg-left"
+          style={{ 
+            backgroundImage: `url(${storageImg1})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'left center'
+          }}
+        />
+        {/* Second background image - right side */}
+        <div 
+          className="absolute inset-0 bg-cover bg-right opacity-50"
+          style={{ 
+            backgroundImage: `url(${storageImg3})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'right center'
+          }}
+        />
+        {/* Light blur and overlay */}
+        <div className="absolute inset-0 backdrop-blur-sm bg-white/75"></div>
+      </div>
+      
+      <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in">
           <div className="inline-flex items-center gap-3 mb-4">

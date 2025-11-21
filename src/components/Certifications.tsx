@@ -26,7 +26,7 @@ const Certifications = () => {
               <img 
                 src={iecLogo} 
                 alt="IEC - Importer Exporter Code Certificate" 
-                className="w-full h-64 object-contain mb-6"
+                className="w-full h-96 object-contain mb-6"
               />
               <h3 className="font-playfair text-2xl font-bold text-foreground text-center">
                 IEC Certificate
@@ -40,7 +40,7 @@ const Certifications = () => {
               <img 
                 src={apedaLogo} 
                 alt="APEDA - Agricultural and Processed Food Products Export Development Authority" 
-                className="w-full h-64 object-contain mb-6"
+                className="w-full h-96 object-contain mb-6"
               />
               <h3 className="font-playfair text-2xl font-bold text-foreground text-center">
                 APEDA Registered

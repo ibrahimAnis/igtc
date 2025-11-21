@@ -8,7 +8,7 @@ import soyabeanImg from "@/assets/soyabean.png";
 import cornImg from "@/assets/corn.png";
 import chickpeasImg from "@/assets/chickpeas.jpg";
 import treeGumImg from "@/assets/gond-1.jpg";
-import redChilliImg from "@/assets/red-chilli.jpg";
+import redChilliImg from "@/assets/red-chilli.jpeg";
 
 const Products = () => {
   const products = [
@@ -17,72 +17,63 @@ const Products = () => {
       description: "Export-grade gluten-free jowar with high fiber content. Carefully processed, quality tested, and certified for international health food standards and applications.",
       image: jowarImg,
       features: ["High Fiber", "Gluten-Free", "Export Quality", "Bulk Orders"],
-      category: "Millets",
-      exportMarkets: ["USA", "UK", "Singapore", "Europe"]
+      category: "Millets"
     },
     {
       name: "Bajra (Pearl Millet)",
       description: "Premium nutritious bajra with high protein content. Cleaned, sorted, and packaged meeting international gluten-free food production standards and certifications.",
       image: bajraImg,
       features: ["Gluten-Free", "High Protein", "Export Ready", "Bulk Available"],
-      category: "Millets",
-      exportMarkets: ["USA", "Europe", "UAE", "UK"]
+      category: "Millets"
     },
     {
       name: "Soyabean",
       description: "Non-GMO premium soyabeans with high oil content. Export-grade quality for oil extraction and food processing with international quality certification.",
       image: soyabeanImg,
       features: ["High Oil Content", "Non-GMO", "Export Grade", "Quality Certified"],
-      category: "Oilseeds",
-      exportMarkets: ["Singapore", "USA", "Europe", "UAE"]
+      category: "Oilseeds"
     },
     {
       name: "Maize",
       description: "High-quality moisture-controlled maize for food and feed grade applications. Thoroughly cleaned, graded, and tested for international export standards.",
       image: cornImg,
       features: ["High Grade", "Bulk Export", "Food & Feed Grade", "Moisture Control"],
-      category: "Grains",
-      exportMarkets: ["Singapore", "Malaysia", "UAE", "Europe"]
+      category: "Grains"
     },
     {
       name: "Chickpeas (Chana)",
       description: "Premium quality chickpeas with consistent size and color. Machine-cleaned, double-sorted, and quality-checked for international food processing and export standards.",
       image: chickpeasImg,
       features: ["Premium Quality", "Export Grade", "Quality Certified", "Bulk Available"],
-      category: "Pulses",
-      exportMarkets: ["Dubai", "UK", "USA", "Singapore"]
+      category: "Pulses"
     },
     {
       name: "Edible Gum (Gond)",
       description: "100% natural food-grade and pharma-grade tree gum. Carefully sourced, processed, and tested meeting international quality standards for multiple applications.",
       image: treeGumImg,
       features: ["100% Natural", "Food Grade", "Pharma Grade", "Bulk Orders"],
-      category: "Natural Products",
-      exportMarkets: ["USA", "Europe", "Singapore", "UAE"]
+      category: "Natural Products"
     },
     {
       name: "Red Chilli",
       description: "Premium red chilli with consistent heat levels and vibrant color. High capsaicin content, perfectly dried, and custom-packed for export standards.",
       image: redChilliImg,
       features: ["High Capsaicin", "Premium Quality", "Bulk Export", "Custom Packing"],
-      category: "Spices",
-      exportMarkets: ["Dubai", "Qatar", "UK", "Malaysia"]
+      category: "Spices"
     },
     {
       name: "Fresh Banana",
       description: "Farm-fresh ripe bananas with superior quality and taste. Transported via temperature-controlled cold chain logistics ensuring optimal freshness and minimal damage.",
       image: "https://images.unsplash.com/photo-1603833665858-e61d17a86224?w=500",
       features: ["Fresh Quality", "Cold Chain", "Ripe & Ready", "Daily Export"],
-      category: "Fruits",
-      exportMarkets: ["UAE", "Qatar", "Oman", "Bahrain"]
+      category: "Fruits"
     },
     {
       name: "Premium Papaya",
       description: "Sweet, fresh papayas with excellent texture and rich flavor. Premium-grade selection, protective packaging, and proper handling ensuring quality delivery worldwide.",
       image: "https://images.unsplash.com/photo-1617112848923-cc2234396a8d?w=500",
       features: ["Sweet & Fresh", "Premium Grade", "Export Ready", "Quality Packed"],
-      category: "Fruits",
-      exportMarkets: ["Europe", "UAE", "Singapore", "UK"]
+      category: "Fruits"
     },
   ];
 
@@ -123,7 +114,7 @@ const Products = () => {
                 <div className="relative h-56 overflow-hidden">
                   <img 
                     src={product.image} 
-                    alt={`${product.name} - Export quality agricultural product to ${product.exportMarkets.join(', ')}`}
+                    alt={`${product.name} - Export quality agricultural product`}
                     className="w-full h-full object-cover group-hover:scale-125 group-hover:rotate-2 transition-all duration-700"
                     loading="lazy"
                   />
@@ -134,17 +125,6 @@ const Products = () => {
                     <span className="px-3 py-1 bg-accent text-white text-xs font-bold rounded-full shadow-lg">
                       {product.category}
                     </span>
-                  </div>
-                  
-                  {/* Export Markets on Hover */}
-                  <div className="absolute bottom-3 left-3 right-3 transform translate-y-10 group-hover:translate-y-0 transition-transform duration-300">
-                    <div className="flex flex-wrap gap-1">
-                      {product.exportMarkets.slice(0, 3).map((market, idx) => (
-                        <span key={idx} className="px-2 py-1 bg-white/90 text-black text-xs rounded-md font-semibold">
-                          {market}
-                        </span>
-                      ))}
-                    </div>
                   </div>
                 </div>
 

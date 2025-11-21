@@ -1,9 +1,9 @@
 import { Video } from "lucide-react";
 import { Card, CardContent } from "./ui/card";
-import { Button } from "./ui/button";
-import processingArea from "../assets/processing-area.mp4";
 
 const VideoGallery = () => {
+  // Google Drive video embed URL
+  const videoEmbedUrl = "https://drive.google.com/file/d/1Z4WaF8bOmqiHB3d49-GKb6st7L6rwPl5/preview";
 
   return (
     <section id="video-gallery" className="py-20 bg-gradient-to-b from-secondary/10 via-background to-secondary/10">
@@ -25,16 +25,13 @@ const VideoGallery = () => {
             <Card className="overflow-hidden border-2 border-accent/30 shadow-2xl">
               <CardContent className="p-0">
                 <div className="relative aspect-video bg-black">
-                  <video 
-                    src={processingArea}
-                    controls
+                  <iframe
+                    src={videoEmbedUrl}
                     className="w-full h-full"
-                    playsInline
-                    preload="metadata"
-                  >
-                    <source src={processingArea} type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
+                    allow="autoplay"
+                    allowFullScreen
+                    title="Facility & Operations Video"
+                  />
                 </div>
               </CardContent>
             </Card>
